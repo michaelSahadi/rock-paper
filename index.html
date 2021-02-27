@@ -9,6 +9,22 @@
 
 <body>
   <script>
+    const computerPlay = (min, max) => {
+      let compChoice;
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      const compRandom = Math.floor(Math.random() * (max - min + 1)) + min;
+      if (compRandom === 0) {
+        compChoice = 'Rock';
+      } else if (compRandom === 1) {
+        compChoice = 'Paper';
+      } else {
+        compChoice = 'Scissor';
+      }
+      return compChoice;
+    }
+
+    console.log(computerPlay(0, 2));
 
   </script>
 </body>
