@@ -15,19 +15,43 @@
       max = Math.floor(max);
       const compRandom = Math.floor(Math.random() * (max - min + 1)) + min;
       if (compRandom === 0) {
-        compChoice = 'Rock';
+        compChoice = 'rock';
       } else if (compRandom === 1) {
-        compChoice = 'Paper';
+        compChoice = 'paper';
       } else {
-        compChoice = 'Scissor';
+        compChoice = 'scissor';
       }
       return compChoice;
     }
 
+
+    const winner = (computerSelection, player) => {
+      if (computerSelection === player) {
+        return 'Its a tie!'
+      } else if (computerSelection === 'scissor' && player === 'rock') {
+        return `You win! ${player} beats ${computerSelection}`
+      } else if (computerSelection === 'rock' && player === 'scissor') {
+        return `You loose! ${computerSelection} beats ${player}`
+      } else if (computerSelection === 'paper' && player === 'scissor') {
+        return `You win! ${player} beats ${computerSelection}`
+      } else if (computerSelection === 'scissor' && player === 'paper') {
+        return `You loose! ${computerSelection} beats ${player}`
+      } else if (computerSelection === 'rock' && player === 'paper') {
+        return `You win! ${player} beats ${computerSelection}`
+      } else if (computerSelection === 'paper' && player === 'rock') {
+        return `You loose! ${computerSelection} beats ${player}`
+      }
+    }
+
+
     const computerSelection = computerPlay(0, 2);
-    console.log(computerSelection);
-    const playerSelection = prompt('...');
-    console.log(playerSelection);
+    const playerSelection = prompt('Rock, Paper, Scissor');
+    const player = playerSelection.toLowerCase()
+    // console.log(`Player 1: ${player}`);
+    // console.log(`Computer: ${computerSelection}`);
+    console.log(winner(computerSelection, player));
+
+
   </script>
 </body>
 
