@@ -1,3 +1,17 @@
+/* Michael Sahadi
+  Rock, Paper, Scissor
+  2021
+ */
+
+
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissor = document.querySelector('.scissor');
+const message = document.querySelector('.message');
+const score = document.querySelector('score');
+
+
+
 
 const computerPlay = (min, max) => {
   let compChoice;
@@ -16,7 +30,7 @@ const computerPlay = (min, max) => {
 
 for (let i = 0; i < 5; i++) {
   const computerSelection = computerPlay(0, 2);
-  const playerSelection = prompt('Rock, Paper, Scissor');
+  // const playerSelection = prompt('Rock, Paper, Scissor');
   const player = playerSelection.toLowerCase()
   const winner = (computerSelection, player) => {
     if (computerSelection === player) {
