@@ -6,31 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rock, Paper, Scissor</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="container">
     <div class="left">
-      <div class="player">Player 1:</div>
-      <div class="playerScore">00</div>
+      <div class="player">Player 1</div>
+      <div class="playerScore">05</div>
     </div>
     <div class="centerTop">
-      <h1>VS.</h1>
+      <img src="images/VS.svg" alt="vs" class="vs">
     </div>
+
     <div class="right">
-      <div class="computer">Computer:</div>
-      <div class="compScore">00</div>
+      <div class="computer">Computer</div>
+      <div class="compScore">02</div>
     </div>
 
     <div class="playerChoices">
-      <div class="rock">
-        <img src="images/hand-rock-regular.svg" alt="">
+      <div data-thing class="rock">
+        <img src="images/hand-rock-regular.svg" alt="rock">
       </div>
-      <div class="paper">
-        <img src="images/hand-paper-regular.svg" alt="">
+      <div data-thing class="paper">
+        <img src="images/hand-paper-regular.svg" alt="paper">
       </div>
-      <div class="scissor">
-        <img src="images/hand-scissors-regular.svg" alt="">
+      <div data-thing class="scissor">
+        <img src="images/hand-scissor-regular.svg" alt="scissor">
       </div>
     </div>
 
@@ -39,22 +42,29 @@
 
       <img src="images/bar.svg" alt="" class="bar">
 
-      <img src="images/hand-scissors-regular.svg" alt="" class="compChoice">
+      <img src="images/hand-scissor-regular.svg" alt="" class="compChoice">
     </div>
 
     <div class="compChoices">
       <div class="compRock">
-        <img src="images/hand-rock-regular.svg" alt="">
+        <img src="images/hand-rock-regular.svg" alt="rock">
       </div>
       <div class="compPaper">
-        <img src="images/hand-paper-regular.svg" alt="">
+        <img src="images/hand-paper-regular.svg" alt="paper">
       </div>
       <div class="compScissor">
-        <img src="images/hand-scissors-regular.svg" alt="">
+        <img src="images/hand-scissor-regular.svg" alt="scissor">
       </div>
     </div>
-
   </div>
+
+
+  <div class="modal">
+    <img src="images/loser.svg" alt="" class="messages">
+    <button class="playAgain">Play Again</button>
+  </div>
+
+
   <script src="main.js"></script>
 </body>
 
