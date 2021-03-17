@@ -8,8 +8,6 @@ const rock = document.querySelector('.rock');
 const paper = document.querySelector('.paper');
 const scissor = document.querySelector('.scissor');
 const message = document.querySelector('.modal');
-// const score = document.querySelector('score');
-
 const playerChoice = document.querySelector('.playerChoice');
 const compChoice = document.querySelector('.compChoice');
 const playerScore = document.querySelector('.playerScore');
@@ -17,6 +15,7 @@ const compScore = document.querySelector('.compScore');
 const choice = document.querySelectorAll('[data-thing]');
 const messages = document.querySelector('.messages');
 const playAgain = document.querySelector('.playAgain');
+
 let cs = 0;
 let ps = 0;
 
@@ -29,8 +28,6 @@ const int = () => {
   playerChoice.classList.add('hidden');
   compChoice.classList.add('hidden');
 }
-
-int();
 
 const computerPlay = () => {
   let compChoice;
@@ -88,6 +85,8 @@ const gamePlay = pick => {
     message.classList.remove('hidden');
   }
 }
+
+int();
 
 choice.forEach(button => {
   button.addEventListener('click', () => {
