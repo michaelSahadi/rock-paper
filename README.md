@@ -2,7 +2,8 @@
 
 Simple rock, paper, scissor game.
 
-https://michaelsahadi.com/rockPaper/
+The project is hosted on Heroku and can be checked here: https://michaelsahadi.com/rockPaper/
 
-# Demo-Preview
+#Demo-Preview
 
+![Preview](/images/rock-preview.png)
